@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: petfood
+    volumes:
+      - pgdata:/var/lib/postgresql/data:Z
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    
+  etl:
+    build:
+      conext: .
+      dockerfile: Dockerfile.dev
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/petfood
+    volumes:
+      - ./Data_analyse:/app/data/raw:Z
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
