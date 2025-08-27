@@ -1,0 +1,8 @@
+services:
+  etl:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./data_source:/app/data/raw:Z
+      - ./docs:/app/data/docs:Z

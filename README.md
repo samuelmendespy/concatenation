@@ -44,12 +44,14 @@
 
 ## :dart: Sobre ##
 
-Projeto de concatenação de xlsx de vendas, onde o principal objetivo foi concatenar duas planilhas.
+Projeto de concatenação de xlsx de vendas, onde o principal objetivo foi concatenar duas planilhas. Uma nova funcionalidade foi implementada para gerar e visualizar o volume de vendas fictício entre 2020 e 2024. O processo utiliza uma fórmula com o IPCA (IBGE) para simular os dados, e o resultado final é um dashboard de vendas interativo em uma página HTML.
 
 ## :sparkles: Funcionalidades ##
 
 :heavy_check_mark: Concatenar planilhas;\
-:heavy_check_mark: Manipular dados com pandas;\
+:heavy_check_mark: Manipular e Analisar dados de vendas;\
+:heavy_check_mark: Gerar página HTML com dashboard;\
+:heavy_check_mark: Obter dados atualizados do IPCA IBGE;\
 
 ## :rocket: Tecnologias ##
 
@@ -58,6 +60,10 @@ Projeto de concatenação de xlsx de vendas, onde o principal objetivo foi conca
 - [Git](https://git-scm.com) - Uso no versionamento do código
 - Pandas - Aplicação em manipulação e análise de dados
 - Openpyxl - Uso para extrair dados de planilhas Excel
+- [Docker](https://www.docker.com/) - Uso como ambiente de desenvolvimento em container para a aplicação dashboard_page_generator 
+- plotly - Aplicação em visualização de dados
+- xlrd - Uso para extrair dados de planilhas Excel
+- requests - Uso para download de arquivo remoto 
 
 ## :white_check_mark: Pré-requisitos ##
 
